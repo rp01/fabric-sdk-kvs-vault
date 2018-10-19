@@ -25,12 +25,11 @@ client:
     # Specific to the CryptoSuite implementation. Software-based implementations like
     # CryptoSuite_ECDSA_AES.js requires a key store. PKCS#11 based implementations does
     # not.
-    cryptoStore:
-      # Specific to the underlying KeyValueStore that backs the crypto key store.
-      url: "mongodb://localhost:27017"
-      # token: "8vfJ8rIGgET3XDIsmVIuVHT6"
-      collectionName: "crypto"
-      apiVersion: "v1"
+  cryptoStore:
+    url: "http://127.0.0.1:8200"
+    # token: "8vfJ8rIGgET3XDIsmVIuVHT6"
+    apiVersion: "v1"
+
 ```
 
 2. config fabric-sdk-node to use fabric-ca-kvs-mongo 
@@ -39,7 +38,7 @@ client:
 const Client = require('fabric-client');
 
 // this code config the fabric-sdk-node to use fabric-sdk-kvs-mongo
-Client.setConfigSetting('key-value-store', 'fabric-sdk-kvs-mongo');
+Client.setConfigSetting('key-value-store', 'fabric-sdk-kvs-vault');
 
 // this load the network.yaml from step 1
 const client = Client.loadFromConfig('<some-path-to-your-network.yaml>');
