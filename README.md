@@ -1,6 +1,6 @@
 # fabric-sdk-kvs-vault
 
-Key value store for fabric-sdk-node using Hashicorp's Vaul
+Key value store for fabric-sdk-node using Hashicorp's Vault
 
 ## Install
 
@@ -61,13 +61,13 @@ await client.setUserContext(user);
 1. Windows powershell
 
 ```powershell
-$env:VAULT_TOKEN='6JtkGzUL0Wtoz7ffzrbtMkIE'
+$env:VAULT_TOKEN="VAULT_TOKEN"
 ```
 
 2. Linux bash
 
 ```bash
-export VAULT_TOKEN='6JtkGzUL0Wtoz7ffzrbtMkIE'
+export VAULT_TOKEN=VAULT_TOKEN
 ```
 
 ## How to fix error with secrets engine
