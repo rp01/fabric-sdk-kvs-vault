@@ -1,16 +1,15 @@
 {
   "name": "fabric-sdk-kvs-vault",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Hashicorp's Vault kvs for fabric-sdk-node",
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
-    "start-mongo-docker": "docker run --name mongo -d -p 27017:27017 mongo",
     "test": "mocha"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/zhaochy1990/fabric-sdk-kvs-mongo.git"
+    "url": "git+ssh://git@github.com:ramanandapanda/fabric-sdk-kvs-vault.git"
   },
   "keywords": [
     "fabric-ca",

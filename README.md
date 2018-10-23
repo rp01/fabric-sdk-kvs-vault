@@ -25,11 +25,11 @@ client:
     # Specific to the CryptoSuite implementation. Software-based implementations like
     # CryptoSuite_ECDSA_AES.js requires a key store. PKCS#11 based implementations does
     # not.
-    cryptoStore:
-      # Specific to the underlying KeyValueStore that backs the crypto key store.
-      endpoint: "http://127.0.0.1:8200"
-      # token: "VAULT_TOKEN" or can be set from env as VAULT_TOKEN
-      apiVersion: "v1"
+  cryptoStore:
+    # Specific to the underlying KeyValueStore that backs the crypto key store.
+    endpoint: "http://127.0.0.1:8200"
+    # token: "VAULT_TOKEN" or can be set from env as VAULT_TOKEN
+    apiVersion: "v1"
 ```
 
 2. config fabric-sdk-node to use fabric-ca-kvs-vault 
