@@ -61,13 +61,13 @@ await client.setUserContext(user);
 1. Windows powershell
 
 ```powershell
-$env:VAULT_TOKEN="VAULT_TOKEN"
+$env:VAULT_TOKEN="<VAULT_TOKEN>"
 ```
 
 2. Linux bash
 
 ```bash
-export VAULT_TOKEN=VAULT_TOKEN
+export VAULT_TOKEN=<VAULT_TOKEN>
 ```
 
 ## How to fix error with secrets engine

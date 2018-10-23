@@ -1,6 +1,6 @@
 {
   "name": "fabric-sdk-kvs-vault",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Hashicorp's Vault kvs for fabric-sdk-node",
   "main": "index.js",
   "scripts": {
@@ -19,9 +19,9 @@
   "author": "Ramananda Panda",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/zhaochy1990/fabric-sdk-kvs-mongo/issues"
+    "url": "https://github.com/ramanandapanda/fabric-sdk-kvs-vault/issues"
   },
-  "homepage": "https://github.com/zhaochy1990/fabric-sdk-kvs-mongo#readme",
+  "homepage": "https://github.com/ramanandapanda/fabric-sdk-kvs-vault#readme",
   "devDependencies": {
     "eslint": "^4.9.0",
     "eslint-config-airbnb-base": "12.1.0",
