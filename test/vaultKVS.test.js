@@ -5,17 +5,17 @@
 
 */
 
-const MongoKVS = require('../index');
+const VaultKVStore = require('../index');
 const assert = require('assert');
 
 let kvs;
-describe('Test MongoKVS', () => {
+describe('Test VaultKVStore', () => {
   it('Test constructor', async () => {
-    kvs = new MongoKVS({
-      url: 'mongodb://localhost:27017',
-      dbname: 'fabric-ca',
-      collectionName: 'kvs',
-    });
+    kvs = new VaultKVStore({
+      endpoint: "http://127.0.0.1:8200",
+      apiVersion: "v1",
+
+  });
   });
 
   it('Test setValue', async () => {

@@ -4,5 +4,5 @@
  SPDX-License-Identifier: MIT
 
 */
-
-module.exports = require('./lib/vaultKeyValueStore');
+process.env.DEBUG = 'VaultKVS'; 
+ module.exports = require('./lib/vaultKeyValueStore');
