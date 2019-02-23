@@ -93,9 +93,12 @@ vault secrets enable -version=1 -path=secret kv
 ```bash
 vault kv get secret/<PREVIOUSLY_SET_KEY>
 ```
+
 ## To enable debuging
 
 run:
 ```node
 process.env.DEBUG = 'VaultKVS';
 ```
+
+
