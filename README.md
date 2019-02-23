@@ -14,21 +14,23 @@ npm i fabric-sdk-kvs-vault
 
 ```yaml
 # your network.yaml
-client:
-  # Since the node.js SDK supports pluggable KV stores, the properties under "credentialStore"
-  # are implementation specific
-  credentialStore:
+credentialStore:
+    # [Optional]. Specific to FileKeyValueStore.js or similar implementations in other SDKs. Can be others
+    # if using an alternative impl. For instance, CouchDBKeyValueStore.js would require an object
+    # here for properties like url, db name, etc.
+    # path: "./fabric-client-kv-org1"
     endpoint: "http://127.0.0.1:8200"
-    # token: "VAULT_TOKEN" or can be set from env as VAULT_TOKEN
+    token: "<VAULT_TOKEN>" # or can be set from env as VAULT_TOKEN
     apiVersion: "v1"
 
-    # Specific to the CryptoSuite implementation. Software-based implementations like
-    # CryptoSuite_ECDSA_AES.js requires a key store. PKCS#11 based implementations does
+    # [Optional]. Specific to the CryptoSuite implementation. Software-based implementations like
+    # CryptoSuite_ECDSA_AES.js in node SDK requires a key store. PKCS#11 based implementations does
     # not.
     cryptoStore:
       # Specific to the underlying KeyValueStore that backs the crypto key store.
+      # path: "/tmp/fabric-client-kv-org1"
       endpoint: "http://127.0.0.1:8200"
-      # token: "VAULT_TOKEN" or can be set from env as VAULT_TOKEN
+      token: "<VAULT_TOKEN>" # or can be set from env as VAULT_TOKEN
       apiVersion: "v1"
 ```
 
@@ -72,6 +74,15 @@ export VAULT_TOKEN=<VAULT_TOKEN>
 
 ## How to fix error with secrets engine
 
+Some Times you may get status 404 even in setting values.
+just open another terminal tab/window run:
+
+```bash
+export the VAULT_TOKEN=<TOKEN> 
+export VAULT_ADDRESS='http(s)://<HOST>:<PORT>'
+```
+Then run the following command:
+
 ```bash
 vault secrets disable secret
 vault secrets enable -version=1 -path=secret kv
@@ -82,3 +93,12 @@ vault secrets enable -version=1 -path=secret kv
 ```bash
 vault kv get secret/<PREVIOUSLY_SET_KEY>
 ```
+
+## To enable debuging
+
+run:
+```node
+process.env.DEBUG = 'VaultKVS';
+```
+
+
