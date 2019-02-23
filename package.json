@@ -1,6 +1,6 @@
 {
   "name": "fabric-sdk-kvs-vault",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "Hashicorp's Vault kvs for fabric-sdk-node",
   "main": "index.js",
   "scripts": {
@@ -14,7 +14,10 @@
   "keywords": [
     "fabric-ca",
     "fabric-sdk-node",
-    "Hashicorp's Vault"
+    "Hashicorp's Vault",
+    "fabric-sdk-kvs-vault",
+    "hashicorp",
+    "secret"
   ],
   "author": "Ramananda Panda",
   "license": "MIT",
