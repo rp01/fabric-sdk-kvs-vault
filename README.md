@@ -20,7 +20,7 @@ credentialStore:
     # here for properties like url, db name, etc.
     # path: "./fabric-client-kv-org1"
     endpoint: "http://127.0.0.1:8200"
-    token: "<VAULT_TOKEN>"
+    token: "<VAULT_TOKEN>" # or can be set from env as VAULT_TOKEN
     apiVersion: "v1"
 
     # [Optional]. Specific to the CryptoSuite implementation. Software-based implementations like
@@ -30,7 +30,7 @@ credentialStore:
       # Specific to the underlying KeyValueStore that backs the crypto key store.
       # path: "/tmp/fabric-client-kv-org1"
       endpoint: "http://127.0.0.1:8200"
-      token: "<VAULT_TOKEN>"
+      token: "<VAULT_TOKEN>" # or can be set from env as VAULT_TOKEN
       apiVersion: "v1"
 ```
 
