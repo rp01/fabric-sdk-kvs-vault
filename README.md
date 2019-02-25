@@ -78,7 +78,7 @@ Some Times you may get status 404 even in setting values.
 just open another terminal tab/window run:
 
 ```bash
-export the VAULT_TOKEN=<TOKEN> 
+export VAULT_TOKEN=<TOKEN> 
 export VAULT_ADDRESS='http(s)://<HOST>:<PORT>'
 ```
 Then run the following command:
