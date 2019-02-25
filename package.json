@@ -1,6 +1,6 @@
 {
   "name": "fabric-sdk-kvs-vault",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Hashicorp's Vault kvs for fabric-sdk-node",
   "main": "index.js",
   "scripts": {
